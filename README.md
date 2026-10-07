@@ -20,8 +20,7 @@ A view of the dashboard used to report and explore the dataset is shown below.
 # Data Structure & Initial Checks
 
 The dataset contains **11,923 records and 14 fields** with the grain representing an individual support ticket, including information about when the ticket was created and resolved, the support queue responsible for handling it, its priority, ticket type, and associated categories or tags.
-The data dictionary gives a clear description of the data and can be downloaded here /[file:///C:/Users/User/Documents/Data_Dictionary_IT_data.pdf]
-
+The data dictionary gives a clear description of the data and can be downloaded [here] https://github.com/jirenonso/IT-Performance-Analysis/blob/main/Data_Dictionary
 
 # Executive Summary
 
