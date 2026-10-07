@@ -28,7 +28,7 @@ The dataset contains **11,923 records and 14 fields** with the grain representin
 The data dictionary gives a clear description of the data and can be downloaded [here](https://github.com/jirenonso/IT-Performance-Analysis/blob/main/Data_Dictionary.md)
 # Executive Summary
 
-### Overview of Findings
+### Summary of Insights
 Ticket volume **declined by 12.6% in February 2024 & increased by 13.8% in March**, and has since been relatively steady before dropping in Q4. While **January recorded the highest ticket volume at 735 tickets**, a similar February–March pattern appeared again in 2025, suggesting a recurring seasonal pattern in support activity.
 
 Support workload was concentrated across a small number of queues, with **Technical Support accounting for 28.62% of all tickets**, followed by Product Support at 18.72% and Customer Service at 15.59%.
