@@ -14,47 +14,14 @@ Insights and recommendations are provided across the following key areas:
 
 A view of the dashboard used to report and explore the dataset is shown below.
 
+<img width="801" height="482" alt="IT_dashboard" src="https://github.com/user-attachments/assets/f0cec22c-a67f-41fc-8972-98f60125260a" />
 
-
-
-[IT Support Performance Dashboard](./IT_Performance_Project/IT_Performance_Dashboard.png)
 
 # Data Structure & Initial Checks
 
-The dataset contained **11,923 records and 14 fields**, covering the period from **January 1, 2024 to May 31, 2025**.
+The dataset contains **11,923 records and 14 fields** with the grain representing an individual support ticket, including information about when the ticket was created and resolved, the support queue responsible for handling it, its priority, ticket type, and associated categories or tags.
+The data dictionary gives a clear description of the data and can be downloaded here /[file:///C:/Users/User/Documents/Data_Dictionary_IT_data.pdf]
 
-The dataset included fields such as:
-
-* Ticket ID
-* Creation Date
-* Resolution Date
-* Ticket Description
-* Priority
-* Support Queue
-* Ticket Type
-* Category Tags
-* Documentation Tags
-* Other ticket metadata
-
-Each record represented an individual support ticket, including information about when the ticket was created and resolved, the support queue responsible for handling it, its priority, ticket type, and associated categories or tags.
-
-[IT Dataset](./IT_Performance_Project/IT_Dataset.xlsx)
-
-Before beginning the analysis, the dataset was profiled to understand its structure and determine how each field could contribute to answering the business questions.
-
-Initial checks focused on:
-
-* Missing and null values
-* Duplicate records
-* Data types
-* Text inconsistencies
-* Extra spaces
-* Category inconsistencies
-* Multi-value fields
-* Invalid tag values
-* Formatting issues
-
-Data cleaning and transformation were performed using **Power Query** to improve data quality and create a more structured dataset for analysis.
 
 # Executive Summary
 
