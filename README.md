@@ -2,6 +2,7 @@
 
 # Project Background
 Founded in 2023, Hive Tech is a global IT company dedicated to managing and resolving client support tickets through a structured, multi-stage support workflow. As the company operates in a high-volume, service-oriented environment, recurring technical issues, uneven support queue workloads, and extended resolution times can place pressure on support teams and affect client productivity. 
+
 This project analyzes Hive Tech’s support ticket data to answer key business questions around ticket volume, recurring issues, queue workload, resolution patterns, and workflow performance, uncovering actionable insights that identify opportunities & improve overall support processes through data-driven decisions.
 
 Insights and recommendations are provided across the following key areas:
