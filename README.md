@@ -24,37 +24,25 @@ The dataset contains **11,923 records and 14 fields** with the grain representin
 
 <img width="1306" height="498" alt="Dataset_IT" src="https://github.com/user-attachments/assets/d6d894b8-67fa-4bd5-8f4d-9e892ffec165" />
 
-The data dictionary gives a clear description of the data and can be downloaded [here] https://github.com/jirenonso/IT-Performance-Analysis/blob/main/Data_Dictionary
-
+The data dictionary gives a clear description of the data and can be downloaded [here](https://github.com/jirenonso/IT-Performance-Analysis/blob/main/Data_Dictionary.md)
 # Executive Summary
 
 ### Overview of Findings
-
-The analysis identified recurring patterns in ticket activity, workload concentration across support queues, and frequently occurring issue categories.
-
-Ticket volume **declined by 12.6% in February 2024 before increasing by 13.8% in March**, while **June recorded the highest ticket volume at 735 tickets**. A similar February–March pattern appeared again in 2025, suggesting a recurring seasonal pattern in support activity.
+Ticket volume **declined by 12.6% in February 2024 & increased by 13.8% in March**, and has since been relatively steady before dropping in Q4. While **January recorded the highest ticket volume at 735 tickets**, a similar February–March pattern appeared again in 2025, suggesting a recurring seasonal pattern in support activity.
 
 Support workload was concentrated across a small number of queues, with **Technical Support accounting for 28.62% of all tickets**, followed by Product Support at 18.72% and Customer Service at 15.59%.
 
 Recurring issue analysis also showed that a relatively small number of categories represented a significant share of support activity. The top three categories accounted for approximately **39%** of categorized tickets, while the top five represented approximately **48%**.
 
-Further analysis of resolution patterns revealed an important limitation in the dataset: resolution days were closely aligned with ticket priority, with High, Medium, and Low priority tickets corresponding to approximately **2, 3, and 4 days** respectively. This limits the usefulness of resolution time as a standalone measure of actual support-team efficiency.
-
 The following sections explore these patterns in greater detail and identify opportunities for improved support planning, workload management, issue prevention, and future data collection.
-
-[Dashboard](./IT_Performance_Project/IT_Performance_Dashboard.png)
 
 # Insights Deep Dive
 
 ### Ticket Volume & Seasonality
+ **February 2024 experienced a 12.6% decline in ticket volume**, followed by a **13.8% increase in March**. January recorded the highest ticket volume overall, with **735 tickets**.
 
-Ticket volume was analyzed by month to determine whether support activity followed recurring patterns across the period.
-
-The analysis showed that **February 2024 experienced a 12.6% decline in ticket volume**, followed by a **13.8% increase in March**. June recorded the highest ticket volume overall, with **735 tickets**.
-
-Interestingly, the February–March pattern appeared again in 2025, with ticket volume declining in February before increasing in March. This recurring pattern suggests that the fluctuations were not isolated to a single year and may reflect a recurring seasonal pattern in support activity.
-
-Ticket activity also declined toward November and December, indicating relatively lower support activity during the latter part of the year.
+Interestingly, the February–March pattern appeared again in 2025, with ticket volume declining in February and increasing in the following month by 16.6% respectively. This recurring pattern was associated with high influx of incidents and requests, suggesting that the fluctuations were not isolated to only a single year and may reflect a recurring seasonal pattern in support activity.
+Ticket activity also declined toward November and December, indicating relatively lower support activity in Q4.
 
 
 <img width="646" height="291" alt="Tickets_volume   Seasonality" src="https://github.com/user-attachments/assets/b1d88199-99ad-4c91-aec4-d69d8e8bb882" />
@@ -65,9 +53,6 @@ These patterns provide a useful basis for support capacity planning. Periods wit
 ---
 
 ### Support Queue Distribution
-
-The next stage of the analysis examined how tickets were distributed across support queues.
-
 The data showed that some queues handled substantially more tickets than others, with **Technical Support accounting for approximately 28.62% of all tickets**.
 
 The leading support queues were:
@@ -86,20 +71,9 @@ The leading support queues were:
 
 Technical Support, Product Support, and Customer Service therefore represented a significant proportion of the overall workload.
 
-However, high ticket volume does not automatically indicate poor performance.
-
-A queue may handle more tickets simply because it is responsible for a larger or more complex category of requests.
-
-Therefore, the analysis treats workload concentration as an indicator for **further operational investigation**, rather than evidence that a particular queue is underperforming.
-
-The next analytical question becomes:
-
-**Does workload concentration correspond with differences in resolution time, ticket complexity, or recurring issue types?**
-
----
+However, high ticket volume does not automatically indicate poor performance. A queue may handle more tickets simply because it is responsible for a larger or more complex category of requests.
 
 ### Recurring Issues & Categories
-
 Category and tag analysis was performed to identify the issues appearing most frequently across the support environment.
 
 The most frequently occurring categories included:
@@ -112,7 +86,8 @@ The most frequently occurring categories included:
 
 The top three categories accounted for approximately **39% of categorized tickets**, while the top five represented approximately **48%**.
 
-[Recurring Issues](./IT_Performance_Project/recurring-issues.png)
+<img width="440" height="363" alt="Recurring tickets" src="https://github.com/user-attachments/assets/5800c74a-5c6d-4c9b-bcb5-e03e86a89a8d" />
+
 
 This concentration is important because recurring support issues may represent opportunities to reduce future ticket volume rather than repeatedly resolving the same problems.
 
@@ -126,55 +101,7 @@ Potential preventive interventions include:
 * Preventive monitoring
 * Automated troubleshooting
 
-This shifts the analysis beyond measuring workload toward identifying opportunities for **proactive issue prevention**.
-
----
-
-### Resolution Time & Operational Performance
-
-One of the key metrics developed during the analysis was **Days to Resolve**.
-
-This field was not originally available in the dataset, so it was derived by calculating the difference between ticket creation and resolution dates:
-
-**Days to Resolve = Resolution Date − Creation Date**
-
-The metric was used to examine the relationship between resolution duration, ticket priority, support queues, and other ticket characteristics.
-
-[Resolution Analysis](./IT_Performance_Project/resolution-analysis.png)
-
-However, the analysis revealed an important limitation.
-
-Resolution duration appeared highly constrained by priority:
-
-* **High Priority — approximately 2 days**
-* **Medium Priority — approximately 3 days**
-* **Low Priority — approximately 4 days**
-
-This means that the observed resolution time may have been structured or generated around ticket priority rather than representing independently observed operational resolution performance.
-
-Therefore, a statement such as:
-
-> **“High-priority tickets are resolved faster.”**
-
-could be misleading because the relationship may already be embedded in how the data was structured.
-
-This is an important analytical consideration because a performance metric should ideally measure the operational outcome independently of the factor being evaluated.
-
-Future data collection should therefore capture actual timestamps for:
-
-* Ticket creation
-* First response
-* Assignment
-* Escalation
-* Resolution
-
-This would enable more reliable measurement of:
-
-* First-response time
-* Mean time to resolution
-* SLA compliance
-* Escalation duration
-* Queue-level resolution performance
+This goes beyond measuring workload toward identifying opportunities for **proactive issue prevention**.
 
 # Recommendations
 
@@ -182,13 +109,10 @@ Based on the findings above, the following recommendations were developed for IT
 
 | **Priority** | **Action**                                                                                                                  | **Owner**                    | **Impact**                                                                                   | **Metric to Track**                                                      |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| **High**     | Use historical ticket patterns to plan staffing and resources ahead of high-volume periods, particularly around June.       | IT Support Management        | Improve capacity planning and reduce potential workload bottlenecks during peak periods.     | Monthly Ticket Volume; Queue Workload; Backlog Volume; Staffing Capacity |
-| **High**     | Review workload distribution across Technical Support, Product Support, and Customer Service.                               | IT Support Management        | Identify potential staffing, escalation, and resource gaps across high-volume queues.        | Tickets per Queue; Resolution Time; Backlog; Escalation Rate             |
-| **High**     | Investigate recurring IT, Performance, Bug, Technical Support, and Outage issues.                                           | IT Support & Technical Teams | Reduce repetitive tickets through preventive action, documentation, and system improvements. | Recurring Issue Volume; Ticket Reduction; Knowledge-Base Usage           |
-| **Medium**   | Incorporate historical seasonality into support planning.                                                                   | IT Support Management        | Allow teams to prepare capacity and resources before predictable changes in ticket activity. | Monthly Ticket Volume; Seasonal Variance; Capacity Utilization           |
-| **High**     | Capture actual timestamps for first response, assignment, escalation, and resolution.                                       | IT Operations / Data Team    | Improve the reliability of operational performance and SLA measurement.                      | First Response Time; MTTR; SLA Compliance; Escalation Duration           |
+| **High**     | Utilize ticket patterns to plan staffing and resources ahead of high-volume periods, particularly around January, being the month with the highest tickets recorded.       | IT Support Management        | Improve capacity planning and reduce potential workload bottlenecks during peak periods.     | Monthly Ticket Volume; Queue Workload; Backlog Volume; Staffing Capacity |
+| **High**     |Stabilize eligible ticket routing across support queues as Technical Support and Product Support handle a disproportionately large share of incoming tickets, while General Inquiry and HR account for less than 5% combined.                               | IT Support / Service Desk Management        | Reduce workload concentration in high-volume queues, improve workload balance across support teams, and support more efficient ticket handling.     |queue share (%), Avg resolution time by queue|
+| **High**     |IT accounted for 1999 tickets followed by Performance (985) and Tech support (773). Investigate recurring IT, Performance, Bug, Technical Support, Outage issues and automate where necessary.                                          | IT Support & Technical Teams | Reduce repetitive tickets through preventive action, documentation, and system improvements. | Recurring Issue Volume; Ticket Reduction; Knowledge-Base Usage           |
 | **Medium**   | Add customer segment, affected product/system, escalation history, SLA status, and resolution category to future datasets.  | IT Operations / Data Team    | Improve root-cause analysis and identify the operational drivers of support workload.        | Root Cause; Resolution Category; Escalation Rate; SLA Breaches           |
-| **Medium**   | Establish recurring reporting for ticket volume, queue workload, recurring issues, resolution performance, and seasonality. | IT Support Management        | Enable continuous monitoring and earlier identification of emerging operational issues.      | Ticket Volume; Queue Share; Recurring Issues; Resolution Metrics         |
 
 # Assumptions and Caveats
 
@@ -221,8 +145,7 @@ The following are the key takeaways from the analysis:
 
 **Data Preparation & Transformation**
 
-* Microsoft Excel
-* Power Query
+* Microsoft Excel, Power Query
 
 **Data Analysis**
 
@@ -230,25 +153,23 @@ The following are the key takeaways from the analysis:
 * Calculated fields
 * KPI analysis
 * Trend analysis
-* Workload analysis
-* Category and tag analysis
 
 **Data Visualization**
 
 * Excel Charts
 * Conditional Formatting
 * Interactive Slicers
-* Excel Dashboard
+* Dashboard Development
+* Data story-telling
 
 **Analytical Techniques**
 
 * Data profiling
 * Data cleaning
 * Data transformation
-* Descriptive analysis
-* Trend analysis
+* Descriptive analytics
 * Segmentation
-* Operational performance analysis
+
 
 
 
