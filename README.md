@@ -20,6 +20,10 @@ A view of the dashboard used to report and explore the dataset is shown below.
 # Data Structure & Initial Checks
 
 The dataset contains **11,923 records and 14 fields** with the grain representing an individual support ticket, including information about when the ticket was created and resolved, the support queue responsible for handling it, its priority, ticket type, and associated categories or tags.
+
+
+<img width="1306" height="498" alt="Dataset_IT" src="https://github.com/user-attachments/assets/d6d894b8-67fa-4bd5-8f4d-9e892ffec165" />
+
 The data dictionary gives a clear description of the data and can be downloaded [here] https://github.com/jirenonso/IT-Performance-Analysis/blob/main/Data_Dictionary
 
 # Executive Summary
@@ -52,7 +56,9 @@ Interestingly, the February–March pattern appeared again in 2025, with ticket 
 
 Ticket activity also declined toward November and December, indicating relatively lower support activity during the latter part of the year.
 
-[Ticket Volume Seasonality](./IT_Performance_Project/ticket-volume-seasonality.png)
+
+<img width="646" height="291" alt="Tickets_volume   Seasonality" src="https://github.com/user-attachments/assets/b1d88199-99ad-4c91-aec4-d69d8e8bb882" />
+
 
 These patterns provide a useful basis for support capacity planning. Periods with historically higher ticket volumes, particularly around June, may require greater staffing capacity and resource availability, while lower-volume periods could provide opportunities for backlog reduction, documentation, process improvement, and other operational activities.
 
@@ -74,7 +80,9 @@ The leading support queues were:
 | IT Support         |       11.67% |
 | Billing & Payments |       10.92% |
 
-[Support Queue Distribution](./IT_Performance_Project/support-queue-distribution.png)
+
+<img width="607" height="284" alt="Support queue distribution" src="https://github.com/user-attachments/assets/3a8ce640-c3af-4d2f-972e-bf69617dae97" />
+
 
 Technical Support, Product Support, and Customer Service therefore represented a significant proportion of the overall workload.
 
