@@ -132,7 +132,7 @@ Throughout the analysis, several assumptions and data limitations were identifie
 
 The following are the key takeaways from the analysis:
 
-* **Ticket activity followed recurring seasonal patterns**, with February declines followed by March increases and June recording the highest ticket volume at **735 tickets**.
+* **Ticket activity followed recurring seasonal patterns**, with February declines followed by March increases and January recording the highest ticket volume at **735 tickets**.
 * **Technical Support handled the largest share of the workload at 28.62%**, followed by Product Support at 18.72% and Customer Service at 15.59%.
 * **Recurring issue categories represented a significant portion of support activity**, with the top three categories accounting for approximately 39% of categorized tickets and the top five representing approximately 48%.
 * **High ticket volume does not necessarily indicate poor support performance**, as workload concentration may reflect the type and complexity of issues handled by each queue.
